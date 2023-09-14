@@ -1,9 +1,10 @@
 import React from "react";
+import Footer from "./shared-components/Footer.jsx";
 
 export default function home() {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Footer />
     </div>
   );
 }
