@@ -6,10 +6,10 @@ export default function HomeTenantsHomeOwners() {
   return (
     <div>
       <div className="flex font-display">
-        <div className="">
+        <div className=" ">
           <img className="object-contain w-[720px]" src={Tenants} alt="" />
         </div>
-        <div className="flex flex-col justify-center items-center w-1/2">
+        <div className="flex flex-col justify-center items-center w-1/2 bg-gradient-to-t from-footergradwhite to-footergradmidgrey">
           <h1 className="font-bold text-6xl">TENANTS</h1>
           <h1 className="mt-4 font-bold text-4xl">In need of extra room?</h1>
           <h1 className="mt-12 font-medium text-4xl">We can help!</h1>
@@ -18,8 +18,8 @@ export default function HomeTenantsHomeOwners() {
           </h1>
         </div>
       </div>
-      <div className="h-[440px] flex">
-        <div className="flex flex-col justify-center items-center w-1/2">
+      <div className="flex">
+        <div className="flex flex-col justify-center items-center w-1/2 bg-gradient-to-b from-footergradwhite to-footergradmidgrey">
           <h1 className="font-bold text-6xl">HOME OWNERS</h1>
           <h1 className="mt-4 font-bold text-4xl">Looking to invest?</h1>
           <h1 className="mt-12 font-medium text-4xl">Leave it to us!</h1>

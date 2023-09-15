@@ -10,8 +10,8 @@ export default function home() {
   return (
     <div>
       <TopNavBar />
-      <HomeTenantsHomeOwners />
       <HomeMainServices />
+      <HomeTenantsHomeOwners />
       <HomeCustReviews />
       <HomeMakeTheChange />
       <Footer />
