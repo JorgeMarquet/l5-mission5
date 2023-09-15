@@ -4,7 +4,7 @@ import FooterRight from "./FooterRight.jsx";
 
 export default function Footer() {
   return (
-    <footer className="w-screen h-footerlg bg-gradient-to-b from-white via-midgrey to-grey">
+    <footer className="w-screen h-footerlg bg-gradient-to-b from-footergradwhite to-footergradmidgrey">
       <div className="text-center sm:flex sm:text-left">
         <div className="h-footerlg sm:basis-1/2">
           <FooterLeft />
