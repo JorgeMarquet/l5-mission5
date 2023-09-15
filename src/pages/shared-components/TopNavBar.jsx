@@ -7,7 +7,7 @@ export default function TopNavBar() {
         <div>
             <Logo width={497} height={148} />
         </div>
-        <div className="flex-grow ml-90px mr-190px">
+        <div className="flex-grow bg-brightGreen" style={{ marginLeft: '90px', marginRight: '190px' }}>
             <ul className="flex justify-between font-bold text-footertextnavyblue text-lg mb-6"> {/* Changed space-x-6 to justify-between */}
                 <li className="cursor-pointer">Home</li>
                 <li className="cursor-pointer">Invest</li>

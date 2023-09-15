@@ -24,10 +24,6 @@ module.exports = {
         slogo: "266px",
         logo: "333px",
       },
-      spacing: {
-        '90px': '90px',
-        '190px': '190px'
-      },
     },
   },
   plugins: [],
