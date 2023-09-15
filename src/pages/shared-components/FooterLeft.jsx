@@ -1,10 +1,11 @@
 import React from "react";
+import { ReactComponent as Logo } from "../../images/metroLogo.svg";
 
 export default function FooterLeft() {
   return (
-    <div className="flex flex-col pt-7 sm:flex-col sm:pl-32 sm:pr-24">
+    <div className="flex font-display flex-col pt-7 sm:flex-col sm:pl-32 sm:pr-24">
       <div className="flex justify-center sm:justify-start">
-        <img className="object-cover w-slogo h-slogo sm:w-logo sm:h-logo" src="http://via.placeholder.com/640x360" alt="placeholder" />
+        <Logo className="object-cover w-slogo h-slogo sm:w-logo sm:h-logo" />
       </div>
       <div className="flex justify-evenly pt-7 mx-0 sm:justify-between sm:pt-12 sm:mx-0">
         <ul className="text-left">

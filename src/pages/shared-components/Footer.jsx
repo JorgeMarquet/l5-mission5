@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="h-footerlg sm:basis-1/2">
           <FooterLeft />
         </div>
-        <div className="h-footerlg bg-green sm:basis-1/2">
+        <div className="h-footerlg sm:basis-1/2">
           <FooterRight />
         </div>
       </div>
