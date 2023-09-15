@@ -1,11 +1,12 @@
 import React from 'react'
+import { ReactComponent as Logo } from "../../images/metroLogo.svg";
 
 export default function TopNavBar() {
   return (
     <div className="flex justify-between items-center px-4 py-2"> {/* Added flex for horizontal layout and some padding for spacing */}
         <div>
             {/* Placeholder for Metro NZ logo */}
-            <img src="path_to_your_logo_image" alt="Metro NZ logo" className="h-8 w-auto"/> {/* You can adjust the h-8 to control the height */}
+            <Logo className="object-cover w-slogo h-slogo sm:w-logo sm:h-logo" />
         </div>
         <div>
             <ul className="flex space-x-6 font-semibold text-footertextnavyblue text-lg mb-6"> {/* Added flex for horizontal list items and space-x-6 for spacing between items */}
