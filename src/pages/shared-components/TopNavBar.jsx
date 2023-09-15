@@ -15,10 +15,10 @@ export default function TopNavBar() {
                     <li className="cursor-pointer">Home</li>
                     <li className="cursor-pointer flex items-center">
                         <span onClick={() => setShowDropdown(!showDropdown)}>Invest</span>
-                        <img src={displayListIcon} alt="Icon" className="ml-2 h-[12px] w-[15px]" />
+                        <img onClick={() => setShowDropdown(!showDropdown)} src={displayListIcon} alt="Icon" className="ml-2 h-[12px] w-[15px]" />
                         <div 
                             style={{ display: showDropdown ? 'block' : 'none' }}
-                            className="absolute top-full mt-1 left-130 w-48 bg-white border rounded shadow-lg"
+                            className="absolute top-full mt-1 left-130 w-48 bg-white border rounded-xl shadow-lg"
                         >
                             <ul>
                                 <li className="p-2 hover:bg-gray-200">Investment Properties</li>
