@@ -15,6 +15,7 @@ export default function TopNavBar() {
                     <li className="cursor-pointer">Home</li>
 
                     {/* List below includes state hook to visualise suboptions menu accordingly */}
+                    {/*INVEST*/}
                     <li className="cursor-pointer flex items-center">
                         <span onClick={() => setShowDropdown(!showDropdown)}>Invest</span>
                         <img onClick={() => setShowDropdown(!showDropdown)} src={displayListIcon} alt="Icon" className="ml-2 h-[12px] w-[15px]" />
@@ -28,7 +29,7 @@ export default function TopNavBar() {
                             </ul>
                         </div>
                     </li>
-
+                    {/*MANAGE*/}
                     <li className="cursor-pointer flex items-center">
                         <span onClick={() => setShowDropdown(!showDropdown)}>Manage</span>
                         <img onClick={() => setShowDropdown(!showDropdown)} src={displayListIcon} alt="Icon" className="ml-2 h-[12px] w-[15px]" />
@@ -45,6 +46,7 @@ export default function TopNavBar() {
                         </div>
                     </li>
 
+                    {/*RENT*/}
                     <li className="cursor-pointer flex items-center">
                         <span onClick={() => setShowDropdown(!showDropdown)}>Rent</span>
                         <img onClick={() => setShowDropdown(!showDropdown)} src={displayListIcon} alt="Icon" className="ml-2 h-[12px] w-[15px]" />
@@ -60,9 +62,39 @@ export default function TopNavBar() {
                         </div>
                     </li>
 
+                    {/*OTHER SERVICES*/}
+                    <li className="cursor-pointer flex items-center">
+                        <span onClick={() => setShowDropdown(!showDropdown)}>Other Services</span>
+                        <img onClick={() => setShowDropdown(!showDropdown)} src={displayListIcon} alt="Icon" className="ml-2 h-[12px] w-[15px]" />
+                        <div 
+                            style={{ display: showDropdown ? 'block' : 'none' }}
+                            className="absolute top-full mt-1 left-130 w-48 bg-white border rounded-xl shadow-lg text-base font-semibold"
+                        >
+                            <ul>
+                                <li className="p-2 hover:bg-gray-200">Healthy Homes Standards</li>
+                                <li className="p-2 hover:bg-gray-200">Decluttering Services</li>
+                                <li className="p-2 hover:bg-gray-200">Renovation Project Management</li>
+                            </ul>
+                        </div>
+                    </li>
 
-                    <li className="cursor-pointer flex items-center">Other Services <img src={displayListIcon} alt="Icon" className="ml-2 h-[12px] w-[15px]"/></li>
-                    <li className="cursor-pointer flex items-center">About us <img src={displayListIcon} alt="Icon" className="ml-2 h-[12px] w-[15px]"/></li>
+                    {/*ABOUT US*/}
+                    <li className="cursor-pointer flex items-center">
+                        <span onClick={() => setShowDropdown(!showDropdown)}>About us</span>
+                        <img onClick={() => setShowDropdown(!showDropdown)} src={displayListIcon} alt="Icon" className="ml-2 h-[12px] w-[15px]" />
+                        <div 
+                            style={{ display: showDropdown ? 'block' : 'none' }}
+                            className="absolute top-full mt-1 left-130 w-48 bg-white border rounded-xl shadow-lg text-base font-semibold"
+                        >
+                            <ul>
+                                <li className="p-2 hover:bg-gray-200">Our Management Team</li>
+                                <li className="p-2 hover:bg-gray-200">Gallery</li>
+                                <li className="p-2 hover:bg-gray-200">Work with us</li>
+                                <li className="p-2 hover:bg-gray-200">Dispute Process</li>
+                            </ul>
+                        </div>
+                    </li>
+
                     <li className="cursor-pointer">Contact</li>
                 </ul>
             </div>
