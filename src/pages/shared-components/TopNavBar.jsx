@@ -15,12 +15,16 @@ export default function TopNavBar() {
                     <li className="cursor-pointer">Home</li>
 
                     {/* List below includes state hook to visualise suboptions menu accordingly */}
+
                     {/*INVEST*/}
                     <li className="cursor-pointer flex items-center">
-                        <span onClick={() => setShowDropdown(!showDropdown)}>Invest</span>
-                        <img onClick={() => setShowDropdown(!showDropdown)} src={displayListIcon} alt="Icon" className="ml-2 h-[12px] w-[15px]" />
+                        {/* Toggle the dropdown based on its name */}
+                        <span onClick={() => setShowDropdown(showDropdown !== 'Invest' ? 'Invest' : null)}>Invest</span>
+                        <img onClick={() => setShowDropdown(showDropdown !== 'Invest' ? 'Invest' : null)} src={displayListIcon} alt="Icon" className="ml-2 h-[12px] w-[15px]" />
+                        
+                        {/* Check if the dropdown name matches the current state */}
                         <div 
-                            style={{ display: showDropdown ? 'block' : 'none' }}
+                            style={{ display: showDropdown === 'Invest' ? 'block' : 'none' }}
                             className="absolute top-full mt-1 left-130 w-48 bg-white border rounded-xl shadow-lg text-base font-semibold"
                         >
                             <ul>
@@ -29,12 +33,16 @@ export default function TopNavBar() {
                             </ul>
                         </div>
                     </li>
+                    
                     {/*MANAGE*/}
                     <li className="cursor-pointer flex items-center">
-                        <span onClick={() => setShowDropdown(!showDropdown)}>Manage</span>
-                        <img onClick={() => setShowDropdown(!showDropdown)} src={displayListIcon} alt="Icon" className="ml-2 h-[12px] w-[15px]" />
+                      {/* Toggle the dropdown based on its name */}
+                      <span onClick={() => setShowDropdown(showDropdown !== 'Manage' ? 'Manage' : null)}>Manage</span>
+                        <img onClick={() => setShowDropdown(showDropdown !== 'Manage' ? 'Manage' : null)} src={displayListIcon} alt="Icon" className="ml-2 h-[12px] w-[15px]" />
+                        
+                        {/* Check if the dropdown name matches the current state */}
                         <div 
-                            style={{ display: showDropdown ? 'block' : 'none' }}
+                            style={{ display: showDropdown === 'Manage' ? 'block' : 'none' }}
                             className="absolute top-full mt-1 left-130 w-48 bg-white border rounded-xl shadow-lg text-base font-semibold"
                         >
                             <ul>
@@ -48,10 +56,13 @@ export default function TopNavBar() {
 
                     {/*RENT*/}
                     <li className="cursor-pointer flex items-center">
-                        <span onClick={() => setShowDropdown(!showDropdown)}>Rent</span>
-                        <img onClick={() => setShowDropdown(!showDropdown)} src={displayListIcon} alt="Icon" className="ml-2 h-[12px] w-[15px]" />
+                         {/* Toggle the dropdown based on its name */}
+                        <span onClick={() => setShowDropdown(showDropdown !== 'Rent' ? 'Rent' : null)}>Rent</span>
+                        <img onClick={() => setShowDropdown(showDropdown !== 'Rent' ? 'Rent' : null)} src={displayListIcon} alt="Icon" className="ml-2 h-[12px] w-[15px]" />
+                        
+                        {/* Check if the dropdown name matches the current state */}
                         <div 
-                            style={{ display: showDropdown ? 'block' : 'none' }}
+                            style={{ display: showDropdown === 'Rent' ? 'block' : 'none' }}
                             className="absolute top-full mt-1 left-130 w-48 bg-white border rounded-xl shadow-lg text-base font-semibold"
                         >
                             <ul>
@@ -64,10 +75,13 @@ export default function TopNavBar() {
 
                     {/*OTHER SERVICES*/}
                     <li className="cursor-pointer flex items-center">
-                        <span onClick={() => setShowDropdown(!showDropdown)}>Other Services</span>
-                        <img onClick={() => setShowDropdown(!showDropdown)} src={displayListIcon} alt="Icon" className="ml-2 h-[12px] w-[15px]" />
+                        {/* Toggle the dropdown based on its name */}
+                        <span onClick={() => setShowDropdown(showDropdown !== 'Other Services' ? 'Other Services' : null)}>Other Services</span>
+                        <img onClick={() => setShowDropdown(showDropdown !== 'Other Services' ? 'Other Services' : null)} src={displayListIcon} alt="Icon" className="ml-2 h-[12px] w-[15px]" />
+                        
+                        {/* Check if the dropdown name matches the Other Services state */}
                         <div 
-                            style={{ display: showDropdown ? 'block' : 'none' }}
+                            style={{ display: showDropdown === 'Other Services' ? 'block' : 'none' }}
                             className="absolute top-full mt-1 left-130 w-48 bg-white border rounded-xl shadow-lg text-base font-semibold"
                         >
                             <ul>
@@ -80,10 +94,13 @@ export default function TopNavBar() {
 
                     {/*ABOUT US*/}
                     <li className="cursor-pointer flex items-center">
-                        <span onClick={() => setShowDropdown(!showDropdown)}>About us</span>
-                        <img onClick={() => setShowDropdown(!showDropdown)} src={displayListIcon} alt="Icon" className="ml-2 h-[12px] w-[15px]" />
+                         {/* Toggle the dropdown based on its name */}
+                        <span onClick={() => setShowDropdown(showDropdown !== 'About Us' ? 'About Us' : null)}>About Us</span>
+                        <img onClick={() => setShowDropdown(showDropdown !== 'About Us' ? 'About Us' : null)} src={displayListIcon} alt="Icon" className="ml-2 h-[12px] w-[15px]" />
+                        
+                        {/* Check if the dropdown name matches the About Us state */}
                         <div 
-                            style={{ display: showDropdown ? 'block' : 'none' }}
+                            style={{ display: showDropdown === 'About Us' ? 'block' : 'none' }}
                             className="absolute top-full mt-1 left-130 w-48 bg-white border rounded-xl shadow-lg text-base font-semibold"
                         >
                             <ul>
