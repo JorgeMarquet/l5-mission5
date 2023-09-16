@@ -20,20 +20,35 @@ export default function HomeMainServices() {
 
         {/* MAIN SERVICES CARDS */}
         <div className="Services flex justify-center">
-        <div className="flex flex-col items-center justify-center w-[300px] h-[270px] border border-gray-300 rounded-lg pt-2 pr-2 pb-2 pl-2 mt-10 mb-8 ml-0 mr-8">
+            <div 
+            className="flex flex-col items-center justify-center w-[300px] h-[270px] border border-black rounded-lg pt-2 pr-2 pb-2 pl-2 mt-10 mb-8 ml-0 mr-8"
+            style={{ boxShadow: '0 5px 8px #c2c0c0' }}
+            >
             <img className="w-32 h-32" src={Invest} alt="Invest" />
             <p>Invest with Us</p>
-          </div>
+            </div>
 
-          <div className="flex flex-col items-center justify-center w-[300px] h-[270px] border border-gray-300 rounded-lg pt-2 pr-2 pb-2 pl-2 mt-10 mb-8 ml-0 mr-8">
+
+            <div 
+            className="flex flex-col items-center justify-center w-[300px] h-[270px] border border-black rounded-lg pt-2 pr-2 pb-2 pl-2 mt-10 mb-8 ml-0 mr-8"
+            style={{ boxShadow: '0 5px 8px #c2c0c0' }}
+            >
             <img className="w-32 h-32" src={Rent} alt="Rent" />
             <p>Properties for Rent</p>
           </div>
-          <div className="flex flex-col items-center justify-center w-[300px] h-[270px] border border-gray-300 rounded-lg pt-2 pr-2 pb-2 pl-2 mt-10 mb-8 ml-0 mr-8">
+
+          <div 
+            className="flex flex-col items-center justify-center w-[300px] h-[270px] border border-black rounded-lg pt-2 pr-2 pb-2 pl-2 mt-10 mb-8 ml-0 mr-8"
+            style={{ boxShadow: '0 5px 8px #c2c0c0' }}
+            >
             <img className="w-32 h-32" src={Manage} alt="Property Management" />
             <p>Property Management</p>
           </div>
-          <div className="flex flex-col items-center justify-center w-[300px] h-[270px] border border-gray-300 rounded-lg pt-2 pr-2 pb-2 pl-2 mt-10 mb-8 ml-0 mr-8">
+
+          <div 
+            className="flex flex-col items-center justify-center w-[300px] h-[270px] border border-black rounded-lg pt-2 pr-2 pb-2 pl-2 mt-10 mb-8 ml-0 mr-8"
+            style={{ boxShadow: '0 5px 8px #c2c0c0' }}
+            >
             <img className="w-32 h-32" src={Appraisal} alt="Property Appraisal" />
             <p>Property Appraisal</p>
           </div>
