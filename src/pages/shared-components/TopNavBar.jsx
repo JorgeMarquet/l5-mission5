@@ -11,7 +11,7 @@ export default function TopNavBar() {
         <div>
           <Logo width={497} height={148} />
         </div>
-        <div className="relative flex-grow bg-brightGreen" style={{ marginLeft: "70px", marginRight: "190px" }}>
+        <div className="relative flex-grow bg-brightGreen" style={{ marginLeft: "40px", marginRight: "50px" }}>
           <ul className="flex justify-between font-bold text-footertextnavyblue text-lg mb-6">
             <li className="cursor-pointer">Home</li>
 
