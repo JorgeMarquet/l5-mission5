@@ -10,7 +10,7 @@ export default function HomeMainServices() {
     <div>
      {/* BACKGROUND IMAGE */}
         <div 
-            className="bg-center bg-cover h-[600px] flex items-start justify-start p-10" 
+            className="bg-center bg-cover h-[650px] flex items-start justify-start p-10" 
             style={{ backgroundImage: `url(${BackgroundPhoto})` }}
         >
             <div className="text-left">
