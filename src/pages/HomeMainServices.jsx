@@ -1,39 +1,37 @@
-import React from 'react'
-import BackgroundPhoto from '../images/MainServicesAucklandCitySunset.png'
-import Invest from '../images/houseWithKeys.png'
-import Rent from '../images/rentIcon.png'
+import React from "react";
+import BackgroundPhoto from "../images/MainServicesAucklandCitySunset.png";
+import Invest from "../images/houseWithKeys.png";
+import Rent from "../images/rentIcon.png";
 
 export default function HomeMainServices() {
   return (
-    <div>
+    <div className="flex flex-col items-center min-w-fit">
+      <div className="w-[1440px]">
         {/* BACKGROUND IMAGE*/}
         <div>
-            <img src= {BackgroundPhoto}/>
+          <img src={BackgroundPhoto} />
         </div>
 
         {/* MAIN SERVICES CARD*/}
         <div className={"Services"}>
-            <div>
-                <img src= {Invest}/>
-                <p>Invest with Us</p>
-            </div>
-            <div>
-                <img src= {Rent}/>
-                <p>Properties for Rent</p>
-            </div>
-            <div>
-                Property Management
-            </div>
-            <div>
-                Property Appraisal
-            </div>
+          <div>
+            <img src={Invest} />
+            <p>Invest with Us</p>
+          </div>
+          <div>
+            <img src={Rent} />
+            <p>Properties for Rent</p>
+          </div>
+          <div>Property Management</div>
+          <div>Property Appraisal</div>
         </div>
 
         {/* INSPIRATIONAL QUOTE*/}
         <div>
-            <p>Working with you for you</p>
-            <p>We offered tailored services</p>
+          <p>Working with you for you</p>
+          <p>We offered tailored services</p>
         </div>
+      </div>
     </div>
-  )
+  );
 }
