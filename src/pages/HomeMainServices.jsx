@@ -26,25 +26,27 @@ export default function HomeMainServices() {
             </div>
         </div>
 
-        {/* MAIN SERVICES CARDS */}
-        <div className="Services flex justify-between Container">
-            <div className="Service Card flex flex-col items-center">
-                <img className="w-32 h-32" src={Invest} alt="Invest" />
+    {/* MAIN SERVICES CARDS */}
+        <div className="Services flex justify-center Container">
+            <div className="Service Card flex flex-col items-center border border-gray-300 rounded-lg p-16 mt-4 mb-5 ml-3 mr-3">
+                 <img className="w-32 h-32" src={Invest} alt="Invest" />
                 <p>Invest with Us</p>
             </div>
-            <div className="Service Card flex flex-col items-center">
+
+            <div className="Service Card flex flex-col items-center border border-gray-300 rounded-lg p-16 mt-4 mb-5 ml-3 mr-3">
                 <img className="w-32 h-32" src={Rent} alt="Rent" />
                 <p>Properties for Rent</p>
             </div>
-            <div className="Service Card flex flex-col items-center">
+            <div className="Service Card flex flex-col items-center border border-gray-300 rounded-lg p-16 mt-4 mb-5 ml-3 mr-3">
                 <img className="w-32 h-32" src={Manage} alt="Property Management" />
                 <p>Property Management</p>
             </div>
-            <div className="Service Card flex flex-col items-center">
+            <div className="Service Card flex flex-col items-center border border-gray-300 rounded-lg p-16 mt-4 mb-5 ml-3 mr-3">
                 <img className="w-32 h-32" src={Appraisal} alt="Property Appraisal" />
                 <p>Property Appraisal</p>
             </div>
         </div>
+
 
         {/* INSPIRATIONAL QUOTE */}
         <div className ="Quote">
