@@ -27,22 +27,22 @@ export default function HomeMainServices() {
         </div>
 
         {/* MAIN SERVICES CARDS */}
-        <div className="Services Container">
-            <div className="Service Card">
-                <img src={Invest} alt="Invest" />
+        <div className="Services flex justify-between Container">
+            <div className="Service Card flex flex-col items-center">
+                <img className="w-32 h-32" src={Invest} alt="Invest" />
                 <p>Invest with Us</p>
             </div>
-            <div className="Service Card">
-                <img src={Rent} alt="Rent" />
+            <div className="Service Card flex flex-col items-center">
+                <img className="w-32 h-32" src={Rent} alt="Rent" />
                 <p>Properties for Rent</p>
             </div>
-            <div className="Service Card">
-                <img src={Manage} alt="Property Management" />
+            <div className="Service Card flex flex-col items-center">
+                <img className="w-32 h-32" src={Manage} alt="Property Management" />
                 <p>Property Management</p>
             </div>
-            <div className="Service Card">
-                <img src={Appraisal} alt="Property Appraisal" />
-                Property Appraisal
+            <div className="Service Card flex flex-col items-center">
+                <img className="w-32 h-32" src={Appraisal} alt="Property Appraisal" />
+                <p>Property Appraisal</p>
             </div>
         </div>
 
