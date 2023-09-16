@@ -10,8 +10,8 @@ export default function TopNavBar() {
             <div>
                 <Logo width={497} height={148} />
             </div>
-            <div className="relative flex-grow bg-brightGreen" style={{ marginLeft: '70px', marginRight: '190px' }}>
-                <ul className="flex justify-between font-bold text-footertextnavyblue text-lg mb-6">
+            <div className="relative flex-grow bg-brightGreen" style={{ marginLeft: '50px', marginRight: '140px' }}>
+                <ul className="flex justify-between font-bold text-footertextnavyblue text-xl mb-6">
                     <li className="cursor-pointer">Home</li>
 
                     {/* List below includes state hook to visualise suboptions menu accordingly */}
