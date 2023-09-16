@@ -66,7 +66,7 @@ export default function TopNavBar() {
                             className="absolute top-full mt-1 left-130 w-48 bg-white border rounded-xl shadow-lg text-base font-semibold"
                         >
                             <ul>
-                                <li className="p-2 hover:bg-gray-200">Tenancy</li>
+                                <li className="p-2 hover:bg-gray-200">Tenancy Information</li>
                                 <li className="p-2 hover:bg-gray-200">Properties for rent</li>
                                 <li className="p-2 hover:bg-gray-200">Tenancy Application</li>
                             </ul>
