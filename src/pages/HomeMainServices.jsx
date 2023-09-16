@@ -14,13 +14,13 @@ export default function HomeMainServices() {
             style={{ backgroundImage: `url(${BackgroundPhoto})` }}
         >
             <div className="text-left">
-                <div className="text-black text-5xl">
+                <div className="text-black text-7xl">
                     Auckland's
                 </div>
-                <div className="text-black text-4xl font-semibold">
+                <div className="text-black text-5xl font-semibold">
                     most trusted
                 </div>
-                <div className="text-black text-6xl font-bold">
+                <div className="text-black text-7xl font-bold">
                     Property Experts
                 </div>
             </div>
