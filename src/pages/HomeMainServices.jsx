@@ -27,7 +27,7 @@ export default function HomeMainServices() {
         </div>
 
     {/* MAIN SERVICES CARDS */}
-        <div className="Services flex justify-center Container">
+         <div className="Services flex justify-center Container bg-gradient-to-b from -d9d7d7 to-white">
             <div className="Service Card flex flex-col items-center border border-gray-300 rounded-lg p-16 mt-4 mb-5 ml-3 mr-3">
                  <img className="w-32 h-32" src={Invest} alt="Invest" />
                 <p>Invest with Us</p>

@@ -15,6 +15,11 @@ module.exports = {
         footertextnavyblue: "#OE1735",
         themered: "#FF4747",
       },
+      
+      backgroundColor: {
+        'd9d7d7': '#d9d7d7',
+      },
+
       height: {
         footerlg: "412px",
         makelg: "666px",
