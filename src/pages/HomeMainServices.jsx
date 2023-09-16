@@ -49,10 +49,12 @@ export default function HomeMainServices() {
 
 
         {/* INSPIRATIONAL QUOTE */}
-        <div className ="Quote">
-            <p>Working with you for you</p>
-            <p>We offer tailored services</p>
-        </div>
+        <div className="Quote border-t border-b border-black flex flex-col items-center justify-center py-10">
+            <div className="text-black text-6xl font-bold">
+            Working with you, for you. </div>
+            <div className="text-black text-5xl font-semibold text-center leading-relaxed">
+                We offer tailored services</div>
+            </div>
     </div>
   );
 }
