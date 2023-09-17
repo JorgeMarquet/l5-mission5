@@ -21,7 +21,7 @@ export default function HomeMainServices() {
         {/* MAIN SERVICES CARDS */}
         <div className="Services flex justify-center bg-gradient-to-t from-footergradwhite to-footergradmidgrey">
             <div 
-            className="flex flex-col items-center justify-center w-[300px] h-[270px] border bg-white rounded-xl pt-2 pr-2 pb-2 pl-2 mt-10 mb-8 ml-4 mr-4"
+            className="flex flex-col items-center justify-center w-[300px] h-[270px] border bg-white rounded-xl pt-2 pr-2 pb-2 pl-2 mt-14 mb-12 ml-4 mr-4"
             style={{ 
                 boxShadow: '0 5px 8px #c2c0c0',
                 borderColor: '#808080' 
@@ -35,7 +35,7 @@ export default function HomeMainServices() {
 
 
             <div 
-            className="flex flex-col items-center justify-center w-[300px] h-[270px] border bg-white border-black rounded-xl pt-2 pr-2 pb-2 pl-2 mt-10 mb-8 ml-4 mr-4"
+            className="flex flex-col items-center justify-center w-[300px] h-[270px] border bg-white border-black rounded-xl pt-2 pr-2 pb-2 pl-2 mt-14 mb-12 ml-4 mr-4"
             style={{ 
                 boxShadow: '0 5px 8px #c2c0c0',
                 borderColor: '#808080' 
@@ -48,7 +48,7 @@ export default function HomeMainServices() {
           </div>
 
           <div 
-            className="flex flex-col items-center justify-center w-[300px] h-[270px] border bg-white border-black rounded-xl pt-2 pr-2 pb-2 pl-2 mt-10 mb-8 ml-4 mr-4"
+            className="flex flex-col items-center justify-center w-[300px] h-[270px] border bg-white border-black rounded-xl pt-2 pr-2 pb-2 pl-2 mt-14 mb-12 ml-4 mr-4"
             style={{ 
                 boxShadow: '0 5px 8px #c2c0c0',
                 borderColor: '#808080' 
@@ -61,7 +61,7 @@ export default function HomeMainServices() {
           </div>
 
           <div 
-            className="flex flex-col items-center justify-center w-[300px] h-[270px] border bg-white border-black rounded-xl pt-2 pr-2 pb-2 pl-2 mt-10 mb-8 ml-4 mr-4"
+            className="flex flex-col items-center justify-center w-[300px] h-[270px] border bg-white border-black rounded-xl pt-2 pr-2 pb-2 pl-2 mt-14 mb-12 ml-4 mr-4"
             style={{ 
                 boxShadow: '0 5px 8px #c2c0c0',
                 borderColor: '#808080' 
