@@ -21,16 +21,8 @@ module.exports = {
         d9d7d7: "#d9d7d7",
       },
 
-      height: {
-        footerlg: "412px",
-        makelg: "666px",
-        slogo: "74px",
-        logo: "92px",
-      },
-      width: {
-        slogo: "266px",
-        logo: "333px",
-      },
+      height: {},
+      width: {},
     },
   },
   plugins: [require("flowbite/plugin")],

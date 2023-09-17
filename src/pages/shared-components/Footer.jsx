@@ -5,12 +5,12 @@ import FooterRight from "./FooterRight.jsx";
 export default function Footer() {
   return (
     <div className="flex flex-col items-center min-w-fit">
-      <footer className="w-[1440px] h-footerlg bg-gradient-to-b from-footergradwhite to-footergradmidgrey">
-        <div className="text-center sm:flex sm:text-left">
-          <div className="h-footerlg sm:basis-1/2">
+      <footer className="w-[1440px] h-[350px] bg-gradient-to-b from-footergradwhite to-footergradmidgrey">
+        <div className="text-center flex text-left">
+          <div className="h-[400px] basis-1/2">
             <FooterLeft />
           </div>
-          <div className="h-footerlg sm:basis-1/2">
+          <div className="h-[400px] basis-1/2">
             <FooterRight />
           </div>
         </div>

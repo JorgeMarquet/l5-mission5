@@ -1,5 +1,5 @@
 import React from "react";
-import Tenants from "../images/tentants.png";
+import Tenants from "../images/tenants.png";
 import HomeOwners from "../images/homeowners.png";
 
 export default function HomeTenantsHomeOwners() {
@@ -7,8 +7,16 @@ export default function HomeTenantsHomeOwners() {
     <div className="flex flex-col items-center min-w-fit">
       <div className="w-[1440px]">
         <div className="flex font-display">
-          <div className=" ">
-            <img className="object-contain w-[720px]" src={Tenants} alt="" />
+          <div className="z-30">
+            <img
+              className="object-cover overflow-hidden w-[720px] h-[445px]"
+              style={{
+                boxShadow: "0 5px 8px #c2c0c0",
+                borderColor: "#808080",
+              }}
+              src={Tenants}
+              alt=""
+            />
           </div>
           <div className="flex flex-col justify-center items-center w-1/2 bg-gradient-to-t from-footergradwhite to-footergradmidgrey">
             <h1 className="font-bold text-6xl">TENANTS</h1>
@@ -29,7 +37,15 @@ export default function HomeTenantsHomeOwners() {
             </h1>
           </div>
           <div className="">
-            <img className="object-contain w-[720px]" src={HomeOwners} alt="" />
+            <img
+              className="object-cover overflow-hidden w-[720px] h-[445px]"
+              style={{
+                boxShadow: "0 5px 8px #c2c0c0",
+                borderColor: "#808080",
+              }}
+              src={HomeOwners}
+              alt=""
+            />
           </div>
         </div>
       </div>

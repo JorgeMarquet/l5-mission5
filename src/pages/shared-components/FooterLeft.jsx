@@ -3,28 +3,28 @@ import { ReactComponent as Logo } from "../../images/metroLogo.svg";
 
 export default function FooterLeft() {
   return (
-    <div className="flex font-display flex-col pt-7 sm:flex-col sm:pl-32 sm:pr-24">
-      <div className="flex justify-center sm:justify-start">
-        <Logo className="object-cover w-slogo h-slogo sm:w-logo sm:h-logo" />
+    <div className="flex font-display flex-col pl-32 pr-24">
+      <div className="flex justify-start">
+        <Logo className="object-cover w-[333px] h-[92px] sm:w-logo sm:h-logo" />
       </div>
-      <div className="flex justify-evenly pt-7 mx-0 sm:justify-between sm:pt-12 sm:mx-0">
+      <div className="flex justify-between pt-10">
         <ul className="text-left">
           <li className="font-semibold text-footertextnavyblue text-lg mb-6">Article</li>
-          <li className="font-normal text-footertextgrey text-sm text-lg mb-4">New Article</li>
-          <li className="font-normal text-footertextgrey text-sm text-lg mb-4">Popular Article</li>
-          <li className="font-normal text-footertextgrey text-sm text-lg mb-4">Most Read</li>
+          <li className="font-normal text-footertextgrey text-sm text-lg mb-3">New Article</li>
+          <li className="font-normal text-footertextgrey text-sm text-lg mb-3">Popular Article</li>
+          <li className="font-normal text-footertextgrey text-sm text-lg mb-3">Most Read</li>
         </ul>
         <ul className="text-left">
           <li className="font-semibold text-footertextnavyblue text-lg mb-6">Service</li>
-          <li className="font-normal text-footertextgrey text-sm text-lg mb-4">House</li>
-          <li className="font-normal text-footertextgrey text-sm text-lg mb-4">Apartment</li>
-          <li className="font-normal text-footertextgrey text-sm text-lg mb-4">Rental</li>
+          <li className="font-normal text-footertextgrey text-sm text-lg mb-3">House</li>
+          <li className="font-normal text-footertextgrey text-sm text-lg mb-3">Apartment</li>
+          <li className="font-normal text-footertextgrey text-sm text-lg mb-3">Rental</li>
         </ul>
         <ul className="text-left">
           <li className="font-semibold text-footertextnavyblue text-lg mb-6">About Us</li>
-          <li className="font-normal text-footertextgrey text-sm text-lg mb-4">Our Team</li>
-          <li className="font-normal text-footertextgrey text-sm text-lg mb-4">Career</li>
-          <li className="font-normal text-footertextgrey text-sm text-lg mb-4">Gallery</li>
+          <li className="font-normal text-footertextgrey text-sm text-lg mb-3">Our Team</li>
+          <li className="font-normal text-footertextgrey text-sm text-lg mb-3">Career</li>
+          <li className="font-normal text-footertextgrey text-sm text-lg mb-3">Gallery</li>
         </ul>
       </div>
     </div>
