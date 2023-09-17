@@ -21,7 +21,7 @@ export default function HomeMainServices() {
         {/* MAIN SERVICES CARDS */}
         <div className="Services flex justify-center bg-gradient-to-t from-footergradwhite to-footergradmidgrey">
             <div 
-            className="flex flex-col items-center justify-center w-[300px] h-[280px] border border-black rounded-lg pt-2 pr-2 pb-2 pl-2 mt-10 mb-8 ml-0 mr-8"
+            className="flex flex-col items-center justify-center w-[300px] h-[280px] border bg-white border-black rounded-xl pt-2 pr-2 pb-2 pl-2 mt-10 mb-8 ml-4 mr-4"
             style={{ boxShadow: '0 5px 8px #c2c0c0' }}
             >
             <img className="w-32 h-32" src={Invest} alt="Invest" />
@@ -32,7 +32,7 @@ export default function HomeMainServices() {
 
 
             <div 
-            className="flex flex-col items-center justify-center w-[300px] h-[280px] border border-black rounded-lg pt-2 pr-2 pb-2 pl-2 mt-10 mb-8 ml-0 mr-8"
+            className="flex flex-col items-center justify-center w-[300px] h-[280px] border bg-white border-black rounded-xl pt-2 pr-2 pb-2 pl-2 mt-10 mb-8 ml-4 mr-4"
             style={{ boxShadow: '0 5px 8px #c2c0c0' }}
             >
             <img className="w-32 h-32" src={Rent} alt="Rent" />
@@ -42,7 +42,7 @@ export default function HomeMainServices() {
           </div>
 
           <div 
-            className="flex flex-col items-center justify-center w-[300px] h-[280px] border border-black rounded-lg pt-2 pr-2 pb-2 pl-2 mt-10 mb-8 ml-0 mr-8"
+            className="flex flex-col items-center justify-center w-[300px] h-[280px] border bg-white border-black rounded-xl pt-2 pr-2 pb-2 pl-2 mt-10 mb-8 ml-4 mr-4"
             style={{ boxShadow: '0 5px 8px #c2c0c0' }}
             >
             <img className="w-32 h-32" src={Manage} alt="Property Management" />
@@ -52,7 +52,7 @@ export default function HomeMainServices() {
           </div>
 
           <div 
-            className="flex flex-col items-center justify-center w-[300px] h-[280px] border border-black rounded-lg pt-2 pr-2 pb-2 pl-2 mt-10 mb-8 ml-0 mr-8"
+            className="flex flex-col items-center justify-center w-[300px] h-[280px] border bg-white border-black rounded-xl pt-2 pr-2 pb-2 pl-2 mt-10 mb-8 ml-4 mr-4"
             style={{ boxShadow: '0 5px 8px #c2c0c0' }}
             >
             <img className="w-32 h-32" src={Appraisal} alt="Property Appraisal" />
