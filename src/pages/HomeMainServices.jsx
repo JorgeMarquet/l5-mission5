@@ -63,7 +63,9 @@ export default function HomeMainServices() {
         </div>
 
         {/* INSPIRATIONAL QUOTE */}
-        <div className="Quote border-t border-b border-black flex flex-col items-center justify-center py-10">
+        <div className="Quote border-t border-b border-black flex flex-col items-center justify-center py-10"
+        style={{ boxShadow: '0 5px 8px #c2c0c0' }}
+        >
           <div className="text-black text-6xl font-bold">Working with you, for you. </div>
           <div className="text-black text-5xl font-semibold text-center leading-relaxed">We offer tailored services</div>
         </div>
