@@ -3,12 +3,30 @@ import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css"; // For default styling
 
 export default function PropertiesListings() {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const allCards = Array(6).fill().map((_, index) => <PropertiesListingsCards key={index}/>); // Example with 7 cards
+
+  const cardsPerPage = 6;
+  const startIdx = (currentPage - 1) * cardsPerPage;
+  const cardsToShow = allCards.slice(startIdx, startIdx + cardsPerPage);
+  
+  const totalPages = Math.ceil(allCards.length / cardsPerPage);
+
+  const handlePageChange = (pageNum) => {
+    setCurrentPage(pageNum);
+  };
+
   return (
-    <div className="flex flex-wrap justify-between p-8">
-      <PropertiesListingsCards />
-      <PropertiesListingsCards />
-      <PropertiesListingsCards />
-      {/* Add more <PropertiesListingsCards /> components as you wish */}
+    <div className="flex flex-col items-center space-y-8 p-8">
+      <div className="flex flex-wrap justify-between">
+        {cardsToShow}
+      </div>
+      <Pagination 
+        totalPages={totalPages} 
+        currentPage={currentPage} 
+        onPageChange={handlePageChange} 
+      />
     </div>
   );
 }
@@ -29,7 +47,6 @@ function PropertiesListingsCards() {
 }
 
 function ImageCarousel({ currentIndex, onSlideChange }) {
-  // For the prototype, let's use some placeholder images
   const images = [
     'https://via.placeholder.com/150',
     'https://via.placeholder.com/150',
@@ -48,11 +65,9 @@ function ImageCarousel({ currentIndex, onSlideChange }) {
         controlsStrategy="responsive"
       />
       <div className="absolute inset-y-0 left-0 flex items-center">
-        {/* This button will overlay the default previous button of the carousel */}
         <button className="p-2 bg-black bg-opacity-50 text-white">‹</button>
       </div>
       <div className="absolute inset-y-0 right-0 flex items-center">
-        {/* This button will overlay the default next button of the carousel */}
         <button className="p-2 bg-black bg-opacity-50 text-white">›</button>
       </div>
     </div>
@@ -60,9 +75,9 @@ function ImageCarousel({ currentIndex, onSlideChange }) {
 }
 
 function ListingInfo() {
-  const title = "Listing Title"; // Prototype data
-  const numbers = ["123", "456", "789"]; // Prototype data
-  const pricePerWeek = "500/Week"; // Prototype data
+  const title = "Listing Title";
+  const numbers = ["123", "456", "789"];
+  const pricePerWeek = "500/Week";
 
   return (
     <div className="p-4">
@@ -73,6 +88,26 @@ function ListingInfo() {
         ))}
       </div>
       <div className="mt-2">{pricePerWeek}</div>
+    </div>
+  );
+}
+
+function Pagination({ totalPages, currentPage, onPageChange }) {
+  return (
+    <div className="flex space-x-4">
+      {Array.from({ length: totalPages }).map((_, index) => {
+        const pageNum = index + 1;
+        const isActive = pageNum === currentPage;
+        return (
+          <button 
+            key={pageNum}
+            onClick={() => onPageChange(pageNum)}
+            className={`p-2 ${isActive ? 'bg-black text-white' : 'text-black'}`}
+          >
+            {pageNum}
+          </button>
+        );
+      })}
     </div>
   );
 }
