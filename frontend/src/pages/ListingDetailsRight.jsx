@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import SendMessageLong from "./shared-components/SendMessageLong";
 import ListingModal from "./ListingModal";
 
 export default function ListingDetailsRight() {

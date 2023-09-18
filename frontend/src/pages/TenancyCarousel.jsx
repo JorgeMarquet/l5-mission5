@@ -2,11 +2,11 @@ import React from "react";
 import { Carousel } from "flowbite-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import Slide1 from "./Carousel1/Slide1";
-import Slide2 from "./Carousel1/Slide2";
-import Slide3 from "./Carousel1/Slide3";
-import Slide4 from "./Carousel1/Slide4";
-import Slide5 from "./Carousel1/Slide5";
+import Slide1 from "./Carousel3/Slide1";
+import Slide2 from "./Carousel3/Slide2.jsx";
+import Slide3 from "./Carousel3/Slide3.jsx";
+import Slide4 from "./Carousel3/Slide4.jsx";
+import Slide5 from "./Carousel3/Slide5.jsx";
 
 const customTheme = {
   root: {
@@ -54,21 +54,38 @@ function RightControl({ onClick }) {
 
 export default function StaticCarousel() {
   return (
-    <div className="flex flex-col items-center min-w-fit h-[535px]">
-      <div
-        className="w-[1440px] h-[472px] mt-8"
-        style={{
-          boxShadow: "0 5px 8px #c2c0c0",
-          borderColor: "#808080",
-        }}
-      >
-        <Carousel theme={customTheme} slideInterval={5000} pauseOnHover leftControl={<LeftControl />} rightControl={<RightControl />}>
-          <Slide1 />
-          <Slide2 />
-          <Slide3 />
-          <Slide4 />
-          <Slide5 />
-        </Carousel>
+    <div className="flex flex-col items-center min-w-fit">
+      <div className="w-[1440px] ml-12">
+        <div className="flex justify-start">
+          <h1 className="flex text-5xl text-[#4A5468] font-bold">Steps to a Successful Tenancy</h1>
+        </div>
+        <div
+          className="w-[1350px] h-[550px] mt-4"
+          style={{
+            boxShadow: "0 5px 8px #c2c0c0",
+            borderColor: "#808080",
+          }}
+        >
+          <Carousel theme={customTheme} slideInterval={5000} pauseOnHover leftControl={<LeftControl />} rightControl={<RightControl />}>
+            <Slide1 />
+            <Slide2 />
+            <Slide3 />
+            <Slide4 />
+            <Slide5 />
+          </Carousel>
+        </div>
+        <div className="flex items-center mt-28 mb-20">
+          <h1 className="flex justify-center text-5xl mr-16 font-semibold">Already found your new home?</h1>
+          <button
+            className="w-[280px] h-[50px] bg-themered rounded-lg text-white text-lg font-semibold  active:bg-violet-700"
+            style={{
+              boxShadow: "0 5px 8px #c2c0c0",
+              borderColor: "#808080",
+            }}
+          >
+            Apply here
+          </button>
+        </div>
       </div>
     </div>
   );
