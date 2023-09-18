@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import SendMessageLong from "./shared-components/SendMessageLong";
+import ListingModal from "./ListingModal";
 
 export default function ListingDetailsRight() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="flex flex-col items-center justify-center h-full">
       <div>
-        <form className="max-w-md w-full">
+        <div className="max-w-md w-full">
           <div className="flex flex-col items-center">
             <h1 className="font-semibold text-4xl">Interested?</h1>
             <h1 className="mt-2 font-light">Contact us about this property</h1>
@@ -30,7 +41,7 @@ export default function ListingDetailsRight() {
             <label className="font-semibold text-sm" for="email">
               E-mail
             </label>
-            <input className="w-full h-[40px] border border-gray-300 rounded-lg drop-shadow-sm placeholder-black text-sm font-light" type="email" id="email" name="email" placeholder="+64 (02) 1212-3456" />
+            <input className="w-full h-[40px] border border-gray-300 rounded-lg drop-shadow-sm placeholder-black text-sm font-light" type="email" id="email" name="email" placeholder="you@company.com" />
           </div>
           <div className="flex items-center mt-6">
             <input className="w-[20px] h-[20px] border-2 border-gray-300 rounded drop-shadow-sm" type="checkbox" value="" id="checkboxDefault" />
@@ -48,8 +59,20 @@ export default function ListingDetailsRight() {
             <input className="w-[20px] h-[20px] border-2 border-gray-300 rounded drop-shadow-sm" type="checkbox" value="" id="checkboxDefault" />
             <label className="ml-3 font-light text-sm hover:cursor-pointer">You agree to our friendly privacy policy</label>
           </div>
-          <SendMessageLong />
-        </form>
+          <div className="mt-5">
+            <button
+              onClick={openModal}
+              className="w-full h-[40px] bg-themered rounded-lg text-white text-sm font-semibold  active:bg-violet-700"
+              style={{
+                boxShadow: "0 5px 8px #c2c0c0",
+                borderColor: "#808080",
+              }}
+            >
+              Send message
+            </button>
+            <ListingModal isOpen={isModalOpen} onClose={closeModal} />
+          </div>
+        </div>
       </div>
     </div>
   );
