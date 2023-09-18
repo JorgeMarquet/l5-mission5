@@ -6,10 +6,10 @@ import ShakingHands from '../images/shakingHands.png'
 
 export default function TenancyInformationContent() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center  ">
 
       {/* BACKGROUND PHOTO */}
-      <div className="w-[1440px] bg-center bg-cover h-[650px] flex items-center justify-start p-10" style={{ backgroundImage: `url(${BackgroundPhoto})` }}>
+      <div className="w-[1440px] bg-center bg-cover h-[650px] flex items-center justify-start p-10 border-b border-black" style={{ backgroundImage: `url(${BackgroundPhoto})` }}>
         <div className="flex flex-col items-start ml-16">
           <div className="text-left mb-4">
             <div className="text-white text-6xl">Finding</div>
