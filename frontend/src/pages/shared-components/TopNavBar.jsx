@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ReactComponent as Logo } from "../../images/metroLogo.svg";
 import displayListIcon from "../../images/displayListIcon.png";
-import  { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export default function TopNavBar() {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -14,7 +14,9 @@ export default function TopNavBar() {
         </div>
         <div className="relative flex-grow bg-brightGreen" style={{ marginLeft: "40px", marginRight: "50px" }}>
           <ul className="flex justify-between font-bold text-footertextnavyblue text-lg mb-6">
-            <li className="font-regular text-sm mt-16 cursor-pointer">Home</li>
+            <li className="font-regular text-sm mt-16 cursor-pointer">
+              <Link to="/">Home</Link>
+            </li>
 
             {/* List below includes state hook to visualise suboptions menu accordingly */}
 
