@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ReactComponent as Logo } from "../../images/metroLogo.svg";
 import displayListIcon from "../../images/displayListIcon.png";
+import  { Link } from "react-router-dom"
 
 export default function TopNavBar() {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -13,7 +14,9 @@ export default function TopNavBar() {
         </div>
         <div className="relative flex-grow bg-brightGreen" style={{ marginLeft: "40px", marginRight: "50px" }}>
           <ul className="flex justify-between font-bold text-footertextnavyblue text-lg mb-6">
-            <li className="font-regular mt-16 cursor-pointer">Home</li>
+            <li className="font-regular mt-16 cursor-pointer">
+              <Link to="/">Home</Link>
+            </li>
 
             {/* List below includes state hook to visualise suboptions menu accordingly */}
 
@@ -64,7 +67,9 @@ export default function TopNavBar() {
               {/* Check if the dropdown name matches the current state */}
               <div style={{ display: showDropdown === "Rent" ? "block" : "none" }} className="absolute top-full mt-1 left-130 w-48 bg-white border rounded-xl shadow-lg text-base font-semibold">
                 <ul>
-                  <li className="text-bs p-2 hover:bg-gray-200">Tenancy Information</li>
+                <li className="text-bs p-2 hover:bg-gray-200">
+                  <Link to="/tenancy-information">Tenancy Information</Link>
+                </li>                
                   <li className="text-bs p-2 hover:bg-gray-200">Properties for rent</li>
                   <li className="text-bs p-2 hover:bg-gray-200">Tenancy Application</li>
                 </ul>
