@@ -30,10 +30,13 @@ export default function TenancyInformationContent() {
 
         {/* Left section (Green div) */}
         <div className=" flex flex-col justify-center p-10 flex-shrink-0">
-          <div className="text-black text-6xl font-semibold mb-4">Happy Tenants</div>
-          <div className="text-black text-5xl mb-4">Our Commitment.</div>
-          <div className="text-black text-bs font-bold mb-4">Even the worst thing we can do here is good.</div>
-          <div className="text-black text-bs font-bold mb-4">Happy painting, God bless.</div>
+          <div className="text-black text-6xl font-bold mb-4">Happy Tenants</div>
+          <div className="text-black text-5xl font-semibold mb-6">Our Commitment.</div>
+          <div className="text-black text-xl font-[400] mb-10">
+          Even the worst thing we can do here is good.<br />
+          Happy painting, God bless.
+          </div>
+
           <button
             className="w-[488px] h-[58px] bg-themered rounded-2xl text-white text-xl font-bold active:bg-violet-700"
             style={{
