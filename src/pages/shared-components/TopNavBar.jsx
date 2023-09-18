@@ -28,8 +28,8 @@ export default function TopNavBar() {
               {/* Check if the dropdown name matches the current state */}
               <div style={{ display: showDropdown === "Invest" ? "block" : "none" }} className="absolute top-full mt-1 left-130 w-48 bg-white border rounded-xl shadow-lg text-base font-semibold">
                 <ul>
-                  <li className="text-xs p-2 hover:bg-gray-200">Investment Properties</li>
-                  <li className="text-xs p-2 hover:bg-gray-200">Tenanted Property Sales</li>
+                  <li className="text-bs p-2 hover:bg-gray-200">Investment Properties</li>
+                  <li className="text-bs p-2 hover:bg-gray-200">Tenanted Property Sales</li>
                 </ul>
               </div>
             </li>
@@ -45,10 +45,10 @@ export default function TopNavBar() {
               {/* Check if the dropdown name matches the current state */}
               <div style={{ display: showDropdown === "Manage" ? "block" : "none" }} className="absolute top-full mt-1 left-130 w-52 bg-white border rounded-xl shadow-lg text-base font-semibold">
                 <ul>
-                  <li className="text-xs p-2 hover:bg-gray-200">Property Management</li>
-                  <li className="text-xs p-2 hover:bg-gray-200">Building Management</li>
-                  <li className="text-xs p-2 hover:bg-gray-200">Rental Management</li>
-                  <li className="text-xs p-2 hover:bg-gray-200">Body Corporate Administration</li>
+                  <li className="text-bs p-2 hover:bg-gray-200">Property Management</li>
+                  <li className="text-bs p-2 hover:bg-gray-200">Building Management</li>
+                  <li className="text-bs p-2 hover:bg-gray-200">Rental Management</li>
+                  <li className="text-bs p-2 hover:bg-gray-200">Body Corporate Administration</li>
                 </ul>
               </div>
             </li>
@@ -64,9 +64,9 @@ export default function TopNavBar() {
               {/* Check if the dropdown name matches the current state */}
               <div style={{ display: showDropdown === "Rent" ? "block" : "none" }} className="absolute top-full mt-1 left-130 w-48 bg-white border rounded-xl shadow-lg text-base font-semibold">
                 <ul>
-                  <li className="text-xs p-2 hover:bg-gray-200">Tenancy Information</li>
-                  <li className="text-xs p-2 hover:bg-gray-200">Properties for rent</li>
-                  <li className="text-xs p-2 hover:bg-gray-200">Tenancy Application</li>
+                  <li className="text-bs p-2 hover:bg-gray-200">Tenancy Information</li>
+                  <li className="text-bs p-2 hover:bg-gray-200">Properties for rent</li>
+                  <li className="text-bs p-2 hover:bg-gray-200">Tenancy Application</li>
                 </ul>
               </div>
             </li>
@@ -82,9 +82,9 @@ export default function TopNavBar() {
               {/* Check if the dropdown name matches the Other Services state */}
               <div style={{ display: showDropdown === "Other Services" ? "block" : "none" }} className="absolute top-full mt-1 left-130 w-56 bg-white border rounded-xl shadow-lg text-base font-semibold">
                 <ul>
-                  <li className="text-xs p-2 hover:bg-gray-200">Healthy Homes Standards</li>
-                  <li className="text-xs p-2 hover:bg-gray-200">Decluttering Services</li>
-                  <li className="text-xs p-2 hover:bg-gray-200">Renovation Project Management</li>
+                  <li className="text-bs p-2 hover:bg-gray-200">Healthy Homes Standards</li>
+                  <li className="text-bs p-2 hover:bg-gray-200">Decluttering Services</li>
+                  <li className="text-bs p-2 hover:bg-gray-200">Renovation Project Management</li>
                 </ul>
               </div>
             </li>
@@ -100,10 +100,10 @@ export default function TopNavBar() {
               {/* Check if the dropdown name matches the About Us state */}
               <div style={{ display: showDropdown === "About Us" ? "block" : "none" }} className="absolute top-full mt-1 left-130 w-48 bg-white border rounded-xl shadow-lg text-base font-semibold">
                 <ul>
-                  <li className="text-xs p-2 hover:bg-gray-200">Our Management Team</li>
-                  <li className="text-xs p-2 hover:bg-gray-200">Gallery</li>
-                  <li className="text-xs p-2 hover:bg-gray-200">Work with us</li>
-                  <li className="text-xs p-2 hover:bg-gray-200">Dispute Process</li>
+                  <li className="text-bs p-2 hover:bg-gray-200">Our Management Team</li>
+                  <li className="text-bs p-2 hover:bg-gray-200">Gallery</li>
+                  <li className="text-bs p-2 hover:bg-gray-200">Work with us</li>
+                  <li className="text-bs p-2 hover:bg-gray-200">Dispute Process</li>
                 </ul>
               </div>
             </li>
