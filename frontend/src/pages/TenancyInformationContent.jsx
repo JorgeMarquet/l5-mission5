@@ -1,5 +1,8 @@
 import React from 'react';
 import BackgroundPhoto from '../images/tenancyInformationBackground.png';
+import MagnifyingGlassIcon from '../images/magnifyingGlass.png'
+import RecycleBubble from '../images/recycleBubble.png'
+import ShakingHands from '../images/shakingHands.png'
 
 export default function TenancyInformationContent() {
   return (
@@ -49,13 +52,27 @@ export default function TenancyInformationContent() {
         </div>
 
         {/* Right section (Violet div) */}
-        <div className=" flex items-center justify-center flex-grow">
-          <ul className="flex flex-row space-x-8 text-black"> {/* Updated styles here */}
-            <li>Finding a home</li>
-            <li>Ongoing Support</li>
-            <li>Lasting Relationships</li>
-          </ul>
+        <div className="flex items-center justify-center flex-grow">
+            <ul className="flex flex-row space-x-24 text-black">
+                <li className="flex flex-col items-center space-y-2 h-full">
+                    <img src={MagnifyingGlassIcon} alt="Magnifying Glass" className="h-40 w-auto mb-2" />
+                    <span className="flex-grow flex items-end">Finding a home</span>
+                </li>
+
+                <li className="flex flex-col items-center space-y-2 h-full">
+                    <img src={RecycleBubble} alt="Recycle Bubble" className="h-40 w-auto mb-2" />
+                    <span className="flex-grow flex items-end">Ongoing Support</span>
+                </li>
+
+                <li className="flex flex-col items-center space-y-2 h-full">
+                    <img src={ShakingHands} alt="Shaking Hands" className="h-34 w-auto mb-2" />
+                    <span className="flex-grow flex items-end">Lasting Relationships</span>
+                </li>
+            </ul>
         </div>
+
+
+
       </div>
     </div>
   );
