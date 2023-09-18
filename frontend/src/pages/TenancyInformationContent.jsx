@@ -56,17 +56,17 @@ export default function TenancyInformationContent() {
             <ul className="flex flex-row space-x-24 text-black">
                 <li className="flex flex-col items-center space-y-2 h-full">
                     <img src={MagnifyingGlassIcon} alt="Magnifying Glass" className="h-40 w-auto mb-2" />
-                    <span className="flex-grow flex items-end">Finding a home</span>
+                    <span className="flex-grow flex items-end text-xl font-semibold">Finding a home</span>
                 </li>
 
                 <li className="flex flex-col items-center space-y-2 h-full">
                     <img src={RecycleBubble} alt="Recycle Bubble" className="h-40 w-auto mb-2" />
-                    <span className="flex-grow flex items-end">Ongoing Support</span>
+                    <span className="flex-grow flex items-end text-xl font-semibold">Ongoing Support</span>
                 </li>
 
-                <li className="flex flex-col items-center space-y-2 h-full">
-                    <img src={ShakingHands} alt="Shaking Hands" className="h-34 w-auto mb-2" />
-                    <span className="flex-grow flex items-end">Lasting Relationships</span>
+                <li className="flex flex-col items-center space-y-2 h-full mt-auto">
+                    <img src={ShakingHands} alt="Shaking Hands" className="h-30 w-auto mb-12" />
+                    <span className="flex-grow flex items-end text-xl font-semibold">Lasting Relationships</span>
                 </li>
             </ul>
         </div>
