@@ -70,7 +70,9 @@ export default function TopNavBar() {
                 <li className="text-bs p-2 hover:bg-gray-200">
                   <Link to="/tenancy-information">Tenancy Information</Link>
                 </li>                
-                  <li className="text-bs p-2 hover:bg-gray-200">Properties for rent</li>
+                  <li className="text-bs p-2 hover:bg-gray-200">
+                    <Link to="/properties-for-rent">Properties for rent</Link>
+                  </li>
                   <li className="text-bs p-2 hover:bg-gray-200">Tenancy Application</li>
                 </ul>
               </div>
