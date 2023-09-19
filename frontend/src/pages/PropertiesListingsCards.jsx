@@ -8,7 +8,7 @@ import Listing4 from '../images/listing4.png';
 
 export default function PropertiesListings() {
   const [currentPage, setCurrentPage] = useState(1);
-  const allCards = Array(12).fill().map((_, index) => <PropertiesListingsCards key={index}/>);
+  const allCards = Array(24).fill().map((_, index) => <PropertiesListingsCards key={index}/>);
 
   const cardsPerPage = 6;
   const startIdx = (currentPage - 1) * cardsPerPage;
@@ -41,7 +41,7 @@ function PropertiesListingsCards() {
   };
 
   return (
-    <div className="rounded-lg border border-black overflow-hidden w-1/4 h-96 w-96 m-4">
+    <div className="rounded-lg border border-black overflow-hidden h-90 w-72 m-4">
       <ImageCarousel currentIndex={currentIndex} onSlideChange={handleSlideChange} />
       <ListingInfo />
     </div>
