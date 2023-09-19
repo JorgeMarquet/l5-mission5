@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css"; // For default styling
+import Listing1 from '../images/listing1.png';
+import Listing2 from '../images/listing2.png';
+import Listing3 from '../images/listing3.png';
+import Listing4 from '../images/listing4.png';
 
 export default function PropertiesListings() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -39,7 +43,7 @@ function PropertiesListingsCards() {
   };
 
   return (
-    <div className="rounded-lg border border-black overflow-hidden w-1/4 m-4">
+    <div className="rounded-lg border border-black overflow-hidden w-1/4 h-96 w-80 m-4">
       <ImageCarousel currentIndex={currentIndex} onSlideChange={handleSlideChange} />
       <ListingInfo />
     </div>
@@ -47,37 +51,49 @@ function PropertiesListingsCards() {
 }
 
 function ImageCarousel({ currentIndex, onSlideChange }) {
-  const images = [
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150'
-  ];
+    const images = [
+      Listing1,
+      Listing2,
+      Listing3,
+      Listing4,
+    ];
+    const carousel = React.useRef(null);
 
-  return (
-    <div className="relative">
-      <AliceCarousel
-        activeIndex={currentIndex}
-        onSlideChanged={onSlideChange}
-        items={images.map((src, index) => (
-          <img src={src} alt={`Slide ${index + 1}`} key={index} className="object-cover" />
-        ))}
-        controlsStrategy="responsive"
-      />
-      <div className="absolute inset-y-0 left-0 flex items-center">
-        <button className="p-2 bg-black bg-opacity-50 text-white">‹</button>
+    const responsive = {
+      0: { items: 1 },
+      1024: { items: 1 },
+    };
+
+    return (
+      <div className="relative w-full h-64 overflow-hidden">
+        <AliceCarousel
+          ref={carousel}
+          itemsCountPerPage={1}
+          responsive={responsive}
+          activeIndex={currentIndex}
+          onSlideChanged={onSlideChange}
+          items={images.map((src, index) => (
+            <div className="w-full h-64 flex items-center justify-center">
+              <img src={src} alt={`Slide ${index + 1}`} key={index} className="max-w-full max-h-full object-cover" />
+            </div>
+          ))}
+          controlsStrategy="responsive"
+        />
+        <div className="absolute inset-y-0 left-0 flex items-center z-10">
+          <button className="p-2 bg-black bg-opacity-50 text-white" onClick={() => carousel.current.slideNext()}>‹</button>
+        </div>
+        <div className="absolute inset-y-0 right-0 flex items-center z-10">
+          <button className="p-2 bg-black bg-opacity-50 text-white" onClick={() => carousel.current.slidePrev()}>›</button>
+        </div>
       </div>
-      <div className="absolute inset-y-0 right-0 flex items-center">
-        <button className="p-2 bg-black bg-opacity-50 text-white">›</button>
-      </div>
-    </div>
-  );
+    );
 }
+
 
 function ListingInfo() {
   const title = "Listing Title";
   const numbers = ["123", "456", "789"];
-  const pricePerWeek = "500/Week";
+  const pricePerWeek = "1000/Week";
 
   return (
     <div className="p-4">
