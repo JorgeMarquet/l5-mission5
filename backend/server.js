@@ -1,54 +1,63 @@
-// server.js
-
-// 1. Import necessary modules
-const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');  // if you're using Express < 4.16.0
-const dotenv = require('dotenv');
-
-// 2. Load environment variables from .env file
-dotenv.config();
-
-// 3. Initialize the Express application
+const mongoose = require("mongoose");
+const express = require("express");
 const app = express();
+const cors = require("cors");
+require("dotenv").config();
 
-// 4. Middleware setup
-// If you're using Express < 4.16.0, you might need the body-parser middleware:
-// app.use(bodyParser.json());
-// For Express 4.16.0 and later, the below line will work:
-app.use(express.json());
+app.use(cors());
 
-// 5. Database connection setup
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/yourdbname';
+const MONGODB_URI = process.env.MONGODB_URI;
 
-mongoose.connect(MONGODB_URI, {
+mongoose
+  .connect(MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true
-})
-.then(() => {
-    console.log('Connected to MongoDB');
-})
-.catch(err => {
-    console.error('Error connecting to MongoDB', err);
+  })
+  .then(() => {
+    console.log("Connected to MongoDB");
+  })
+  .catch((err) => {
+    console.error("Error connecting to MongoDB", err);
+  });
+
+const listingSchema = new mongoose.Schema({
+  address: String,
+  price: Number,
+  description: String,
+  bedrooms: Number,
+  bathrooms: Number,
+  parking: Number,
+  longterm: Boolean,
+  tenancylength: Number,
+  bond: Number,
+  smoking: Boolean,
+  latitude: String,
+  longitude: String,
+  image1: String,
+  image2: String,
+  image3: String,
+  image4: String,
+  image5: String,
 });
 
-// 6. Define your routes
-app.get('/', (req, res) => {
-    res.send('Hello from Express server!');
+const Listing = mongoose.model("test", listingSchema, "test");
+
+app.get("/api/listing", async (req, res) => {
+  try {
+    const documents = await Listing.find({});
+    console.log("Fetched documents from MongoDB:", documents);
+    if (documents.length > 0) {
+      res.json(documents);
+    } else {
+      res.status(404).json({ message: "No documents found" });
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    res.status(500).json({ error: "Server error" });
+  }
 });
 
-// ... additional routes ...
-
-// 7. Error handling middleware
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).send('Something broke!');
-});
-
-// 8. Start the server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
-
