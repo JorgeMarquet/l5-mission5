@@ -8,7 +8,7 @@ import Listing4 from '../images/listing4.png';
 
 export default function PropertiesListings() {
   const [currentPage, setCurrentPage] = useState(1);
-  const allCards = Array(24).fill().map((_, index) => <PropertiesListingsCards key={index}/>);
+  const allCards = Array(12).fill().map((_, index) => <PropertiesListingsCards key={index}/>);
 
   const cardsPerPage = 6;
   const startIdx = (currentPage - 1) * cardsPerPage;
@@ -22,7 +22,7 @@ export default function PropertiesListings() {
 
   return (
     <div className="flex flex-col items-center space-y-8 p-8">
-      <div className="flex flex-wrap justify-between">
+      <div className="flex flex-wrap justify-center">
         {cardsToShow}
       </div>
       <Pagination 
@@ -41,7 +41,7 @@ function PropertiesListingsCards() {
   };
 
   return (
-    <div className="rounded-lg border border-black overflow-hidden h-90 w-72 m-4">
+    <div className="rounded-3xl border border-black overflow-hidden h-84 w-72 m-4">
       <ImageCarousel currentIndex={currentIndex} onSlideChange={handleSlideChange} />
       <ListingInfo />
     </div>
@@ -67,7 +67,12 @@ function ImageCarousel({ currentIndex, onSlideChange }) {
           onSlideChanged={onSlideChange}
           items={images.map((src, index) => (
             <div className="w-full h-64 flex items-center justify-center">
-              <img src={src} alt={`Slide ${index + 1}`} key={index} className="max-w-full max-h-full object-cover" />
+              <img 
+                src={src} 
+                alt={`Slide ${index + 1}`} 
+                key={index} 
+                className="w-full h-full object-cover" 
+                />
             </div>
           ))}
           controlsStrategy="responsive"
