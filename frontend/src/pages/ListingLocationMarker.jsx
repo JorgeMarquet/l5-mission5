@@ -1,5 +1,8 @@
+import React from "react";
 import { MarkerF } from "@googlemaps/react-wrapper";
 
-export default function MyMarker() {
-  return <MarkerF position={{ lat: 37.7749, lng: -122.4194 }} />;
+export default function MyMarker({ latitude, longitude }) {
+  const position = { lat: latitude, lng: longitude };
+
+  return <MarkerF position={position} />;
 }

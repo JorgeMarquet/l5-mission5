@@ -2,18 +2,14 @@ import { useMemo } from "react";
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 import "../styling/listingMap.css";
 
-export default function ListingMap() {
+export default function ListingMap({ listingData }) {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyDFTAtJbWdUcTogwlMFzLgFh01dMspGw6E",
   });
 
-  if (!isLoaded) return <div>Loading...</div>;
-
-  return <Map />;
-}
-
-function Map() {
   const center = useMemo(() => ({ lat: -36.846199980733424, lng: 174.76565530612925 }), []);
+
+  if (!isLoaded) return <div>Loading...</div>;
 
   return (
     <div className="flex justify-center">
