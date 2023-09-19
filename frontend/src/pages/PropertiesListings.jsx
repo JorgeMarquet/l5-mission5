@@ -2,6 +2,7 @@ import React from 'react'
 import TopNavBar from './shared-components/TopNavBar'
 import Footer from './shared-components/Footer'
 import PropertiesListingsCards from './PropertiesListingsCards'
+import PropertiesListingsFilter from './PropertiesListingsFilter'
 
 export default function PropertiesListings() {
   return (
@@ -9,6 +10,7 @@ export default function PropertiesListings() {
         <TopNavBar/>
           <div className="Cards Container"> 
           Cards Container
+            <PropertiesListingsFilter/>
             <PropertiesListingsCards/>
           </div>
         <Footer/>
