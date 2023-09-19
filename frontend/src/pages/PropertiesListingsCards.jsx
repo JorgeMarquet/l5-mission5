@@ -8,7 +8,7 @@ import Listing4 from '../images/listing4.png';
 
 export default function PropertiesListings() {
   const [currentPage, setCurrentPage] = useState(1);
-  const allCards = Array(24).fill().map((_, index) => <PropertiesListingsCards key={index}/>);
+  const allCards = Array(12).fill().map((_, index) => <PropertiesListingsCards key={index}/>);
 
   const cardsPerPage = 6;
   const startIdx = (currentPage - 1) * cardsPerPage;
@@ -73,10 +73,10 @@ function ImageCarousel({ currentIndex, onSlideChange }) {
           controlsStrategy="responsive"
         />
         <div className="absolute inset-y-0 left-0 flex items-center z-10">
-          <button className="p-2 bg-black bg-opacity-50 text-white" onClick={() => carousel.current.slideNext()}>‹</button>
+          <button className="p-2 bg-black bg-opacity-50 text-white" onClick={() => carousel.current.slidePrev()}>‹</button>
         </div>
         <div className="absolute inset-y-0 right-0 flex items-center z-10">
-          <button className="p-2 bg-black bg-opacity-50 text-white" onClick={() => carousel.current.slidePrev()}>›</button>
+          <button className="p-2 bg-black bg-opacity-50 text-white" onClick={() => carousel.current.slideNext()}>›</button>
         </div>
       </div>
     );
