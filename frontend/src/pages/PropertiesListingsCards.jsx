@@ -41,7 +41,7 @@ function PropertiesListingsCards() {
   };
 
   return (
-    <div className="rounded-3xl border border-black overflow-hidden h-84 w-72 m-4">
+    <div className="rounded-3xl border border-black overflow-hidden h-84 w-72 mx-16 my-8">
       <ImageCarousel currentIndex={currentIndex} onSlideChange={handleSlideChange} />
       <ListingInfo />
     </div>

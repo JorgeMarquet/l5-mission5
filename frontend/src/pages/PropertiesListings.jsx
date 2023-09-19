@@ -2,18 +2,17 @@ import React from 'react'
 import TopNavBar from './shared-components/TopNavBar'
 import Footer from './shared-components/Footer'
 import PropertiesListingsCards from './PropertiesListingsCards'
-import PropertiesListingsFilterController from './PropertiesListingsFilterController'
 
 export default function PropertiesListings() {
   return (
-    <div>
+    <div style={{ width: '1440px', margin: '0 auto' }}>
         <TopNavBar/>
           <div className="Cards Container"> 
           Cards Container
-            <PropertiesListingsFilterController/>
             <PropertiesListingsCards/>
           </div>
         <Footer/>
     </div>
   )
 }
+
