@@ -8,7 +8,7 @@ import Listing4 from '../images/listing4.png';
 
 export default function PropertiesListings() {
   const [currentPage, setCurrentPage] = useState(1);
-  const allCards = Array(12).fill().map((_, index) => <PropertiesListingsCards key={index}/>);
+  const allCards = Array(24).fill().map((_, index) => <PropertiesListingsCards key={index}/>);
 
   const cardsPerPage = 6;
   const startIdx = (currentPage - 1) * cardsPerPage;
@@ -35,18 +35,25 @@ export default function PropertiesListings() {
 }
 
 function PropertiesListingsCards() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const handleSlideChange = (event) => {
-    setCurrentIndex(event.item);
-  };
-
-  return (
-    <div className="rounded-3xl border border-black overflow-hidden h-84 w-72 mx-16 my-8">
-      <ImageCarousel currentIndex={currentIndex} onSlideChange={handleSlideChange} />
-      <ListingInfo />
-    </div>
-  );
-}
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const handleSlideChange = (event) => {
+      setCurrentIndex(event.item);
+    };
+  
+    return (
+      <div 
+        className="rounded-3xl border border-white overflow-hidden h-84 w-80 mx-14 my-8"
+        style={{ 
+          boxShadow: '10px 0 10px -5px rgba(0, 0, 0, 0.06), -10px 0 10px -5px rgba(0, 0, 0, 0.02), 0 10px 20px rgba(0, 0, 0, 0.15)'
+        }}
+      >
+        <ImageCarousel currentIndex={currentIndex} onSlideChange={handleSlideChange} />
+        <ListingInfo />
+      </div>
+    );
+  }
+  
+  
 
 function ImageCarousel({ currentIndex, onSlideChange }) {
     const images = [ Listing1, Listing2, Listing3, Listing4 ];
