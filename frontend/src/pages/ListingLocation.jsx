@@ -1,7 +1,7 @@
 import React from "react";
 import ListingMap from "./ListingMap";
 
-export default function ListingLocation() {
+export default function ListingLocation({ listingData }) {
   return (
     <div className="flex flex-col items-center min-w-fit mb-52">
       <div className="w-[1440px]">
@@ -9,7 +9,7 @@ export default function ListingLocation() {
           <h1 className="mt-8 mb-8 font-semibold text-4xl">Location</h1>
         </div>
         <div>
-          <ListingMap />
+          <ListingMap listingData={listingData} />
         </div>
       </div>
     </div>

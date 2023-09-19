@@ -38,19 +38,25 @@ const listingSchema = new mongoose.Schema({
   image3: String,
   image4: String,
   image5: String,
+  listingID: Number,
 });
 
 const Listing = mongoose.model("test", listingSchema, "test");
 
-app.get("/api/listing", async (req, res) => {
+app.get("/api/listing/:Id", async (req, res) => {
+  const { Id } = req.params;
+  console.log("Received request for listingID:", Id);
+
   try {
-    const documents = await Listing.find({});
-    console.log("Fetched documents from MongoDB:", documents);
-    if (documents.length > 0) {
-      res.json(documents);
-    } else {
-      res.status(404).json({ message: "No documents found" });
+    const listing = await Listing.findOne({ listingID: parseInt(Id) });
+
+    console.log("Listing data:", listing);
+
+    if (!listing) {
+      return res.status(404).json({ message: "Listing not found" });
     }
+
+    res.json(listing);
   } catch (error) {
     console.error("Error:", error);
     res.status(500).json({ error: "Server error" });
