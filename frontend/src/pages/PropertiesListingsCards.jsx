@@ -7,6 +7,7 @@ import BathroomIcon from '../images/Bathroom.png';
 import CarParkIcon from '../images/CarParkIcon.png';
 
 
+
 export default function PropertiesListings() {
   const [listings, setListings] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -54,29 +55,27 @@ export default function PropertiesListings() {
 function PropertiesListingsCards({ listing }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [
-      listing.image1,
-      listing.image2,
-      listing.image3,
-      listing.image4,
-      listing.image5
-  ].filter(Boolean); // Filter out any null or undefined values
+    listing.image1,
+    listing.image2,
+    listing.image3,
+    listing.image4,
+    listing.image5
+  ].filter(Boolean);
 
   const handleSlideChange = (event) => {
-      setCurrentIndex(event.item);
+    setCurrentIndex(event.item);
   };
 
   return (
-      <div 
-          className="rounded-3xl border border-white overflow-hidden h-84 w-80 mx-14 my-8"
-          style={{ 
-              boxShadow: '10px 0 10px -5px rgba(0, 0, 0, 0.06), -10px 0 10px -5px rgba(0, 0, 0, 0.02), 0 10px 20px rgba(0, 0, 0, 0.15)'
-          }}
-      >
-          <Link to={`/listing/${listing.listingID}`}>
-              <ImageCarousel images={images} currentIndex={currentIndex} onSlideChange={handleSlideChange} />
-          </Link>
-          <ListingInfo listing={listing} />
-      </div>
+    <div 
+      className="rounded-3xl border border-white overflow-hidden h-84 w-80 mx-14 my-8"
+      style={{ 
+        boxShadow: '10px 0 10px -5px rgba(0, 0, 0, 0.06), -10px 0 10px -5px rgba(0, 0, 0, 0.02), 0 10px 20px rgba(0, 0, 0, 0.15)'
+      }}
+    >
+      <ImageCarousel images={images} currentIndex={currentIndex} onSlideChange={handleSlideChange} />
+      <ListingInfo listing={listing} />
+    </div>
   );
 }
 
@@ -120,25 +119,29 @@ function ImageCarousel({ images, currentIndex, onSlideChange }) {
 }
 
 function ListingInfo({ listing }) {
-    const details = [
-      { icon: BedroomIcon, number: listing.bedrooms },
-      { icon: BathroomIcon, number: listing.bathrooms },
-      { icon: CarParkIcon, number: listing.parking }
-    ];
-  
-    return (
-      <div className="p-4 h-1/3">
-        <h2 className="text-xl font-bold"> {listing.address}. {listing.title}</h2>
-        <ul className="flex space-x-4 mt-2">
-          {details.map((detail, index) => (
-            <li key={index} className="flex items-center font-bold text-gray-500">
-              <img src={detail.icon} alt="" className="h-6 w-6 mr-2"/> {detail.number}
-            </li>
-          ))}
-        </ul>
-        <div className="mt-2 text-xl font-bold">{listing.price}/Week</div>
-      </div>
-    );
+  const details = [
+    { icon: BedroomIcon, number: listing.bedrooms },
+    { icon: BathroomIcon, number: listing.bathrooms },
+    { icon: CarParkIcon, number: listing.parking }
+  ];
+
+  return (
+    <div className="p-4 h-1/3">
+      <Link to={`/listing/${listing.listingID}`} className="text-black hover:text-gray-700">
+        <h2 className="text-xl font-bold">
+          {listing.address}. {listing.title}
+        </h2>
+      </Link>
+      <ul className="flex space-x-4 mt-2">
+        {details.map((detail, index) => (
+          <li key={index} className="flex items-center font-bold text-gray-500">
+            <img src={detail.icon} alt="" className="h-6 w-6 mr-2"/> {detail.number}
+          </li>
+        ))}
+      </ul>
+      <div className="mt-2 text-xl font-bold">{listing.price}/Week</div>
+    </div>
+  );
 }
   
 
