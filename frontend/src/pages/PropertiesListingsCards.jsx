@@ -11,7 +11,7 @@ import CarParkIcon from '../images/CarParkIcon.png';
 
 export default function PropertiesListings() {
   const [currentPage, setCurrentPage] = useState(1);
-  const allCards = Array(24).fill().map((_, index) => <PropertiesListingsCards key={index}/>);
+  const allCards = Array(12).fill().map((_, index) => <PropertiesListingsCards key={index}/>);
 
   const cardsPerPage = 6;
   const startIdx = (currentPage - 1) * cardsPerPage;

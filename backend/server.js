@@ -49,7 +49,7 @@ app.get("/", (req, res) => {
 
 // get all listings by ID
 
-app.get("/listings", async (req, res) => {
+app.get("/api/listings", async (req, res) => {
   try {
     const listings = await Listing.find();
     res.json(listings);
