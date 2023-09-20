@@ -6,19 +6,15 @@ require("dotenv").config();
 
 app.use(cors());
 
-const MONGODB_URI = process.env.MONGODB_URI;
+const dbURL = "mongodb://mongo:27017/MetroNZ";
+const db = mongoose.connection;
 
-mongoose
-  .connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => {
-    console.log("Connected to MongoDB");
-  })
-  .catch((err) => {
-    console.error("Error connecting to MongoDB", err);
-  });
+mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true });
+
+db.on("error", console.error.bind(console, "MongoDB connection error:"));
+db.once("open", () => {
+  console.log("Connected to MongoDB");
+});
 
 const listingSchema = new mongoose.Schema({
   title: String,
@@ -63,7 +59,7 @@ app.get("/api/listings", async (req, res) => {
     res.json({
       totalPages: Math.ceil(totalListings / limit),
       currentPage: page,
-      listings
+      listings,
     });
   } catch (err) {
     console.error(err);
