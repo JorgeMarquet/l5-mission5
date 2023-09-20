@@ -21,6 +21,7 @@ mongoose
   });
 
 const listingSchema = new mongoose.Schema({
+  title: String,
   address: String,
   price: Number,
   description: String,
