@@ -15,6 +15,7 @@ module.exports = {
         footertextgrey: "#62646C",
         footertextnavyblue: "#OE1735",
         themered: "#FF4747",
+        'f59e0b': '#f59e0b',
       },
 
       backgroundColor: {
