@@ -27,12 +27,10 @@ const listingSchema = new mongoose.Schema({
   bedrooms: Number,
   bathrooms: Number,
   parking: Number,
-  longterm: Boolean,
   tenancylength: Number,
   bond: Number,
   smoking: Boolean,
-  latitude: String,
-  longitude: String,
+  googlemap: String,
   image1: String,
   image2: String,
   image3: String,
@@ -41,26 +39,25 @@ const listingSchema = new mongoose.Schema({
   listingID: Number,
 });
 
-const Listing = mongoose.model('Listing', listingSchema, 'Properties for rent');
+const Listing = mongoose.model("Listing", listingSchema, "Properties for rent");
 
-// Test 
+// Test
 
-app.get('/', (req, res) => {
-    res.send('Hello from Express server!');
+app.get("/", (req, res) => {
+  res.send("Hello from Express server!");
 });
 
 // get all listings by ID
 
-app.get('/listings', async (req, res) => {
-    try {
-        const listings = await Listing.find();
-        res.json(listings);
-    } catch (err) {
-        console.error(err);
-        res.status(500).send('Error fetching listings');
-    }
+app.get("/listings", async (req, res) => {
+  try {
+    const listings = await Listing.find();
+    res.json(listings);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Error fetching listings");
+  }
 });
-
 
 // get listings by ID for properties for rent
 
