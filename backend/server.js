@@ -50,9 +50,20 @@ app.get("/", (req, res) => {
 // get all listings by ID
 
 app.get("/api/listings", async (req, res) => {
+  const page = parseInt(req.query.page) || 1; // By default, start from page 1
+  const limit = parseInt(req.query.limit) || 6; // 6 listings per page by default, or whatever you prefer
+
+  const skip = (page - 1) * limit;
+
   try {
-    const listings = await Listing.find();
-    res.json(listings);
+    const listings = await Listing.find().skip(skip).limit(limit);
+    const totalListings = await Listing.countDocuments(); // Fetching total number of listings
+
+    res.json({
+      totalPages: Math.ceil(totalListings / limit),
+      currentPage: page,
+      listings
+    });
   } catch (err) {
     console.error(err);
     res.status(500).send("Error fetching listings");
