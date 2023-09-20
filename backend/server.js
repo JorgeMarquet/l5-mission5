@@ -52,7 +52,7 @@ app.get("/", (req, res) => {
 
 app.get("/api/listings", async (req, res) => {
   const page = parseInt(req.query.page) || 1; // By default, start from page 1
-  const limit = parseInt(req.query.limit) || 6; // 6 listings per page by default, or whatever you prefer
+  const limit = parseInt(req.query.limit) || 200;
 
   const skip = (page - 1) * limit;
 
