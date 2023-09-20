@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 import BedroomIcon from '../images/bed.png';
 import BathroomIcon from '../images/Bathroom.png';
 import CarParkIcon from '../images/CarParkIcon.png';
+
 
 export default function PropertiesListings() {
   const [listings, setListings] = useState([]);
@@ -50,30 +52,32 @@ export default function PropertiesListings() {
 }
 
 function PropertiesListingsCards({ listing }) {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const images = [
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const images = [
       listing.image1,
       listing.image2,
       listing.image3,
       listing.image4,
       listing.image5
-    ].filter(Boolean); // Filter out any null or undefined values
+  ].filter(Boolean); // Filter out any null or undefined values
 
-    const handleSlideChange = (event) => {
+  const handleSlideChange = (event) => {
       setCurrentIndex(event.item);
-    };
+  };
 
-    return (
+  return (
       <div 
-        className="rounded-3xl border border-white overflow-hidden h-84 w-80 mx-14 my-8"
-        style={{ 
-          boxShadow: '10px 0 10px -5px rgba(0, 0, 0, 0.06), -10px 0 10px -5px rgba(0, 0, 0, 0.02), 0 10px 20px rgba(0, 0, 0, 0.15)'
-        }}
+          className="rounded-3xl border border-white overflow-hidden h-84 w-80 mx-14 my-8"
+          style={{ 
+              boxShadow: '10px 0 10px -5px rgba(0, 0, 0, 0.06), -10px 0 10px -5px rgba(0, 0, 0, 0.02), 0 10px 20px rgba(0, 0, 0, 0.15)'
+          }}
       >
-        <ImageCarousel images={images} currentIndex={currentIndex} onSlideChange={handleSlideChange} />
-        <ListingInfo listing={listing} />
+          <Link to={`/listing/${listing.listingID}`}>
+              <ImageCarousel images={images} currentIndex={currentIndex} onSlideChange={handleSlideChange} />
+          </Link>
+          <ListingInfo listing={listing} />
       </div>
-    );
+  );
 }
 
 function ImageCarousel({ images, currentIndex, onSlideChange }) {
