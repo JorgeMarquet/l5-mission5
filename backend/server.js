@@ -41,7 +41,28 @@ const listingSchema = new mongoose.Schema({
   listingID: Number,
 });
 
-const Listing = mongoose.model("test", listingSchema, "test");
+const Listing = mongoose.model('Listing', listingSchema, 'Properties for rent');
+
+// Test 
+
+app.get('/', (req, res) => {
+    res.send('Hello from Express server!');
+});
+
+// get all listings by ID
+
+app.get('/listings', async (req, res) => {
+    try {
+        const listings = await Listing.find();
+        res.json(listings);
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Error fetching listings');
+    }
+});
+
+
+// get listings by ID for properties for rent
 
 app.get("/api/listing/:Id", async (req, res) => {
   const { Id } = req.params;
