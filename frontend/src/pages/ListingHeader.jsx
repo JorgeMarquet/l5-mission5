@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
@@ -13,7 +14,9 @@ export default function ListingHeader({ listingData }) {
         <div className="flex flex-col ml-24">
           <div className="flex items-center">
             <FontAwesomeIcon className="mr-4 my-10 w-4 h-5" icon={faArrowLeft} />
-            <h1 className="font-medium text-lg">Return to Search Results</h1>
+            <h1 className="font-medium text-lg">
+              <Link to={`/properties-for-rent`}> Return to Search Results </Link>
+            </h1>
           </div>
           <h1 className="font-semibold text-5xl">
             {listingData.address}, {listingData.title}
