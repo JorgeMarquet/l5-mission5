@@ -21,20 +21,20 @@ export default function ListingHeader({ listingData }) {
         </div>
         <div className="flex justify-center">
           <div className="w-[1350px] h-[680px] grid grid-cols-4 grid-rows-2 gap-6 mt-4" style={{ gridTemplateColumns: "150px 1fr 1fr 1fr" }}>
-            <div className="col-span-2 row-span-2 bg-gray-300" style={{ borderBottomLeftRadius: "60px", borderTopLeftRadius: "60px" }}>
-              <img className="object-" src={listingData.image1} alt="Image 1" />
+            <div className="col-span-2 row-span-2 bg-gray-300 overflow-hidden" style={{ borderBottomLeftRadius: "60px", borderTopLeftRadius: "60px" }}>
+              <img className="object-cover h-full w-full" src={listingData.image1} alt="Large" />
             </div>
-            <div className="bg-gray-300">
-              <img src={listingData.image2} alt="Image 2" />
+            <div className="bg-gray-300 overflow-hidden">
+              <img className="object-cover h-full w-full" src={listingData.image2} alt="Top Left" />
             </div>
-            <div className="bg-gray-300" style={{ borderTopRightRadius: "30px" }}>
-              <img src={listingData.image3} alt="Image 3" />
+            <div className="bg-gray-300 overflow-hidden" style={{ borderTopRightRadius: "30px" }}>
+              <img className="object-cover h-full w-full" src={listingData.image3} alt="Top Right" />
             </div>
-            <div className="bg-gray-300">
-              <img src={listingData.image4} alt="Image 4" />
+            <div className="bg-gray-300 overflow-hidden">
+              <img className="object-cover h-full w-full" src={listingData.image4} alt="Bottom Left" />
             </div>
-            <div className="bg-gray-300" style={{ borderBottomRightRadius: "30px" }}>
-              <img src={listingData.image5} alt="Image 5" />
+            <div className="bg-gray-300 overflow-hidden" style={{ borderBottomRightRadius: "30px" }}>
+              <img className="object-cover h-full w-full" src={listingData.image5} alt="Bottom Right" />
             </div>
           </div>
         </div>

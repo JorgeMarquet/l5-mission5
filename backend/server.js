@@ -6,7 +6,7 @@ require("dotenv").config();
 
 app.use(cors());
 
-const dbURL = "mongodb://mongo:27017/MetroNZ";
+const dbURL = "mongodb://localhost:27017/MetroNZ";
 const db = mongoose.connection;
 
 mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true });

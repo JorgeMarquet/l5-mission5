@@ -9,7 +9,7 @@ export default function ListingMap({ listingData }) {
 
   const center = useMemo(() => ({ lat: -36.846199980733424, lng: 174.76565530612925 }), []);
 
-  if (!isLoaded) return <div>Loading...</div>;
+  if (!isLoaded) return <div></div>;
 
   return (
     <div className="flex justify-center">
