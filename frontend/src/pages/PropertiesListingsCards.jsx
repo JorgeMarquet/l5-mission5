@@ -105,6 +105,12 @@ function ImageCarousel({ images, currentIndex, onSlideChange }) {
             controlsDisabled={true}
           />
           {/* Remaining Carousel controls code... */}
+          <div className="absolute inset-y-0 left-0 flex items-center z-10">
+            <button className="p-2 bg-black bg-opacity-50 text-white" onClick={() => carousel.current.slidePrev()}>‹</button>
+          </div>
+          <div className="absolute inset-y-0 right-0 flex items-center z-10">
+            <button className="p-2 bg-black bg-opacity-50 text-white" onClick={() => carousel.current.slideNext()}>›</button>
+          </div>
         </div>
     );
 }
@@ -118,7 +124,7 @@ function ListingInfo({ listing }) {
   
     return (
       <div className="p-4 h-1/3">
-        <h2 className="text-xl font-bold">{listing.address}</h2>
+        <h2 className="text-xl font-bold"> {listing.address}. {listing.title}</h2>
         <ul className="flex space-x-4 mt-2">
           {details.map((detail, index) => (
             <li key={index} className="flex items-center font-bold text-gray-500">
