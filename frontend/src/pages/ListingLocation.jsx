@@ -1,9 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export default function ListingLocation({ listingData }) {
   if (!listingData) {
-    // If listingData is not available yet, you can return null or a loading message
     return <div></div>;
   }
 
