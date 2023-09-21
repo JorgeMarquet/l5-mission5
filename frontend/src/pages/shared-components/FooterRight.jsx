@@ -35,13 +35,27 @@ export default function FooterRight() {
       <div className="flex flex-col text-left">
         <h1 className="mt-10 mb-4 font-semibold text-footertextnavyblue text-base">Social Media</h1>
         <div>
-          <FontAwesomeIcon className="w-6 h-7 mr-7" icon={faSquareFacebook} />
-          <FontAwesomeIcon className="w-6 h-7 mr-7" icon={faTwitter} />
-          <FontAwesomeIcon className="w-6 h-7 mr-7" icon={faLinkedinIn} />
-          <FontAwesomeIcon className="w-6 h-7 mr-7" icon={faYoutube} />
-          <FontAwesomeIcon className="w-6 h-7 mr-7" icon={faInstagram} />
-          <FontAwesomeIcon className="w-6 h-7 mr-7" icon={faGooglePlusG} />
-          <FontAwesomeIcon className="w-6 h-7 mr-7" icon={faPinterest} />
+          <a href="https:www.facebook.com/">
+            <FontAwesomeIcon className="w-6 h-7 mr-7" icon={faSquareFacebook} />
+          </a>
+          <a href="https:www.twitter.com/">
+            <FontAwesomeIcon className="w-6 h-7 mr-7" icon={faTwitter} />
+          </a>
+          <a href="https:www.linkedin.com/">
+            <FontAwesomeIcon className="w-6 h-7 mr-7" icon={faLinkedinIn} />
+          </a>
+          <a href="https:www.youtube.com/">
+            <FontAwesomeIcon className="w-6 h-7 mr-7" icon={faYoutube} />
+          </a>
+          <a href="https:www.instagram.com/">
+            <FontAwesomeIcon className="w-6 h-7 mr-7" icon={faInstagram} />
+          </a>
+          <a href="https:www.twitter.com/">
+            <FontAwesomeIcon className="w-6 h-7 mr-7" icon={faGooglePlusG} />
+          </a>
+          <a href="https:www.pinterest.com/">
+            <FontAwesomeIcon className="w-6 h-7 mr-7" icon={faPinterest} />
+          </a>
         </div>
       </div>
       <h1 className="mt-12 ml-24 text-xs text-footertextgrey">Copyright &copy; 2023 Minimumlivingcost. All rights reserved.</h1>

@@ -1,6 +1,7 @@
 import React from "react";
 import Tenants from "../images/tenants.png";
 import HomeOwners from "../images/homeowners.png";
+import { Link } from "react-router-dom";
 
 export default function HomeTenantsHomeOwners() {
   return (
@@ -23,7 +24,10 @@ export default function HomeTenantsHomeOwners() {
             <h1 className="mt-4 font-bold text-4xl">In need of extra room?</h1>
             <h1 className="mt-12 font-medium text-4xl">We can help!</h1>
             <h1 className="font-regular text-4xl">
-              <span className="underline">Contact us</span> for more information
+              <Link to="/properties-for-rent" className="underline">
+                Contact us
+              </Link>{" "}
+              for more information
             </h1>
           </div>
         </div>

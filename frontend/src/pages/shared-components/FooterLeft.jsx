@@ -1,5 +1,6 @@
 import React from "react";
 import { ReactComponent as Logo } from "../../images/metroLogo.svg";
+import { Link } from "react-router-dom";
 
 export default function FooterLeft() {
   return (
@@ -18,7 +19,9 @@ export default function FooterLeft() {
           <li className="font-semibold text-footertextnavyblue text-lg mb-6">Service</li>
           <li className="font-normal text-footertextgrey text-sm text-lg mb-3">House</li>
           <li className="font-normal text-footertextgrey text-sm text-lg mb-3">Apartment</li>
-          <li className="font-normal text-footertextgrey text-sm text-lg mb-3">Rental</li>
+          <li className="font-normal text-footertextgrey text-sm text-lg mb-3">
+            <Link to="/properties-for-rent">Rental</Link>
+          </li>
         </ul>
         <ul className="text-left">
           <li className="font-semibold text-footertextnavyblue text-lg mb-6">About Us</li>

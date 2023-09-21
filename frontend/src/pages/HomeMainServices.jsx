@@ -4,6 +4,7 @@ import Invest from "../images/houseWithKeys.png";
 import Rent from "../images/rentIcon.png";
 import Manage from "../images/managementIcon.png";
 import Appraisal from "../images/appraisalIcon.png";
+import { Link } from "react-router-dom";
 
 export default function HomeMainServices() {
   return (
@@ -21,13 +22,13 @@ export default function HomeMainServices() {
         {/* MAIN SERVICES CARDS */}
         <div className="Services flex justify-center bg-gradient-to-t from-footergradwhite to-footergradmidgrey">
           <div
-            className="flex flex-col items-center justify-center w-[260px] h-[250px] border bg-white rounded-xl pt-2 pr-2 pb-2 pl-2 mt-14 mb-12 ml-4 mr-4"
+            className="flex flex-col items-center justify-center w-[260px] h-[250px] border bg-white border-black rounded-xl pt-2 pr-2 pb-2 pl-2 mt-14 mb-12 ml-4 mr-4"
             style={{
               boxShadow: "0 5px 8px #c2c0c0",
               borderColor: "#808080",
             }}
           >
-            <img className="" src={Invest} alt="Invest" />
+            <img className="w-32 h-32" src={Invest} alt="Rent" />
             <p className="font-medium text-2xl">Invest with Us</p>
           </div>
 
@@ -38,8 +39,10 @@ export default function HomeMainServices() {
               borderColor: "#808080",
             }}
           >
-            <img className="w-32 h-32" src={Rent} alt="Rent" />
-            <p className="font-medium text-2xl">Properties for Rent</p>
+            <Link to="properties-for-rent" className="flex flex-col items-center">
+              <img className="w-32 h-32" src={Rent} alt="Rent" />
+              <p className="font-medium text-2xl">Properties for Rent</p>
+            </Link>
           </div>
 
           <div
