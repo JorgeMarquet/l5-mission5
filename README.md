@@ -13,37 +13,11 @@
 
 <h3 align="center">MetroNZ Property Management webpage redesign</h3>
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
 
-Project done in collaboration with: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`,
+Project done in collaboration with: `JorgeMarquet`,`waterclone`,
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -87,10 +61,8 @@ Project done in collaboration with: `github_username`, `repo_name`, `twitter_han
 
 ## Contact
 
-Jene Hamahona - [@Linekdin_handle](https://linkedin.com/jene-hamahona/Linkedin_handle) - jenehamahona@gmail.com
-Jorge Marquet - [@Linekdin_handle](https://linkedin.com/jorgemarquet/Linkedin_handle) - jorge.a.marquet@gmail.com
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Jene Hamahona - [@Linekdin_handle](https://linkedin.com/jene-hamahona) - jenehamahona@gmail.com
+Jorge Marquet - [@Linekdin_handle](https://linkedin.com/jorgemarquet) - jorge.a.marquet@gmail.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
