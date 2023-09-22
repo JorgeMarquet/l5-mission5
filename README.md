@@ -70,9 +70,11 @@ Jorge Marquet - [@Linekdin_handle](https://linkedin.com/jorgemarquet) - jorge.a.
 
 ## Acknowledgments
 
-- []()
-- []()
-- []()
+- Ram Manthry
+- Reuben Simpson
+- Ewan Zhang
+- Minju Yoon
+- Phoebe Su
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
